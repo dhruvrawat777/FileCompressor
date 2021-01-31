@@ -23,7 +23,7 @@ class HuffmanCoder {
         const mp = new Map();         //For storing frequency
         for (let i = 0; i < data.length; i++) {         //Inserting elements in heap
             if (data[i] in mp) {
-                mp[data[i]] =mp[data[i]] 1;
+                mp[data[i]] =mp[data[i]] +1;
             }
             else {
                 mp[data[i]] = 1;

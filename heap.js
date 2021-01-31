@@ -1,6 +1,6 @@
 export {BinaryHeap}
 
-classBinaryHeap {
+class BinaryHeap {
 
     constructor() {
         this.heap = [];

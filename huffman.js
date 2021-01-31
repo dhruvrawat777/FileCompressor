@@ -1,4 +1,4 @@
-import { BinaryHeap } from './heap';
+import { BinaryHeap } from './heap.js';
 export { HuffmanCoder }
 
 class HuffmanCoder {

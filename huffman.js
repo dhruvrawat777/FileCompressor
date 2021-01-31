@@ -4,7 +4,7 @@ export { HuffmanCoder }
 class HuffmanCoder {
     //dfs on huffman tree to get encodings for all characters
     getMappings(node, path) {
-        if (typeof (node[1]) == "string") {
+        if (typeof (node[1]) === "string") {
             this.mappings[node[1]] = path;
             return;
         }
@@ -23,7 +23,7 @@ class HuffmanCoder {
         const mp = new Map();         //For storing frequency
         for (let i = 0; i < data.length; i++) {         //Inserting elements in heap
             if (data[i] in mp) {
-                mp[data[i]] += 1;
+                mp[data[i]] =mp[data[i]] 1;
             }
             else {
                 mp[data[i]] = 1;
@@ -54,7 +54,7 @@ class HuffmanCoder {
         for (let i = 0; i < rem; i++) {
             padding = padding + "0";
         }
-        binary_string += padding;
+        binary_string = binary_string+ padding;
 
         let result = "";
         for (let i = 0; i < binary_string.length; i += 8) {
@@ -123,10 +123,11 @@ class HuffmanCoder {
                 bin = num % 2 + bin;
                 num = Math.floor(num / 2);
             }
+            binary_string=binary_string+bin;
         }
         // removing padding
         binary_string=binary_string.substring(0,binary_string.length-data[1]);
-
+        console.log(binary_string.length);
         //binary string to original data using huffman tree
 
         let res="";

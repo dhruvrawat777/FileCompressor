@@ -1,7 +1,6 @@
 
-export { BinaryHeap }
 
-class BinaryHeap {
+export class BinaryHeap {
 
     constructor() {
         this.heap = [];

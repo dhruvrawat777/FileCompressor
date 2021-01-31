@@ -45,7 +45,7 @@ onload=function(){
                 alert("Text is empty, upload another file");
                 return;
             }
-            let [decode,tree_structure,info]=coder.decode(text);
+            let [decoded,tree_structure,info]=coder.decode(text);
             downloadFile(uploadedFile.name.split('.'[0]+"_decoded.txt"),decoded);
             treearea.innerText=tree_structure;
             treearea.style.marginTop="2000px";

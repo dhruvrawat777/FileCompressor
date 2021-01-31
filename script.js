@@ -6,7 +6,7 @@ onload=function(){
     const decode=document.getElementById('decode');
     const temptext=document.getElementById('temptext');
     const upload=document.getElementById('uploadedFile');
-    const code=new HuffmanCoder();
+    const coder=new HuffmanCoder();
     upload.addEventListener('change',()=>{
         alert("File uploaded")
     });
@@ -44,7 +44,7 @@ onload=function(){
                 alert("Text is empty, upload another file");
                 return;
             }
-            let [decode,tree_structure,info]=code.decode(text);
+            let [decode,tree_structure,info]=coder.decode(text);
             downloadFile(uploadedFile.name.split('.'[0]+"_decoded.txt"),decoded);
             treearea.innerText=tree_structure;
             treearea.style.marginTop="2000px";

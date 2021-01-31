@@ -30,6 +30,7 @@ onload=function(){
             treearea.style.marginTop="2000px";
             temptext.innerText=info;
         };
+        fileReader.readAsText(uploadedFile, "UTF-8");
     };
     decode.onclick=function(){
         const uploadedFile=upload.files[0];

@@ -60,12 +60,3 @@ class BinaryHeap {
 
     }
 }
-let maxheap=new BinaryHeap();
-maxheap.insert([4,1]);
-maxheap.insert([3,1]);
-maxheap.insert([6,1]);
-maxheap.insert([1,1]);
-while(!maxheap.empty()){
-    let mx=maxheap.extractMax();
-    console.log(mx);
-}

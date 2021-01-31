@@ -19,7 +19,7 @@ class BinaryHeap {
         let index = this.size() - 1;
         while (index > 0) {
             let element = this.heap[index];
-            parentIndex = Math.floor((index - 1) / 2);
+            let parentIndex = Math.floor((index - 1) / 2);
             let parent = this.heap[parentIndex];
             if (parent[0] > element[0]) {
                 break;
@@ -32,7 +32,7 @@ class BinaryHeap {
         const mx = this.heap[0];
         const tmp = this.heap.pop();
         if (!this.empty()) {
-            this.heap[0] = temp;
+            this.heap[0] = tmp;
             this.sinkDown(0);
         }
         return mx;
@@ -51,9 +51,18 @@ class BinaryHeap {
         if(largest!==index){
             let tmp=this.heap[largest];
             this.heap[largest]=this.heap[index];
-            this.heap[index]=temp;
+            this.heap[index]=tmp;
             this.sinkDown(largest);
         }
 
     }
+}
+let maxheap=new BinaryHeap();
+maxheap.insert([4,1]);
+maxheap.insert([3,1]);
+maxheap.insert([6,1]);
+maxheap.insert([1,1]);
+while(!maxheap.empty()){
+    let mx=maxheap.extractMax();
+    console.log(mx);
 }
